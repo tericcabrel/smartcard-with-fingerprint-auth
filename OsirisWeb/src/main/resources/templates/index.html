@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/assets/css/home.css}">
+</head>
+<body>
+    <div layout:fragment="content" id="app-home">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0">
+            <div class="page-header">
+                <h2 class="pageheader-title">User Management </h2>
+                <div class="page-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/" class="breadcrumb-link">Home</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-0 pr-0">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="font-weight-bold">USERS LIST</div>
+                    <a class="btn btn-primary btn-sm" href="/register" th:href="@{/register}">
+                        <i class="fas fa-plus"></i>  Add a new user
+                    </a>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover" id="table-users">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">UID</th>
+                                <th scope="col" style="width: 30%">Name</th>
+                                <th scope="col">Birth Date</th>
+                                <th scope="col">Fingerprint</th>
+                                <!--/*<th scope="col">Create Date</th> */-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="user,stat : ${users}">
+                                <th scope="row" th:text="${stat.count}">1</th>
+                                <td th:text="${user.uid}">uid</td>
+                                <td th:text="${user.name}">name</td>
+                                <td th:text="${user.birthDate}">5991-03-23</td>
+                                <td th:text="${user.finger == 'No'} ? 'No' : 'Yes'">
+                                    <span class="badge badge-danger">No</span>
+                                </td>
+                                <!--/*<td th:text="${#dates.format(user.createdAt, 'dd/MMM/yyyy HH:mm')}">1970-01-01 00:00:00</td>*/-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

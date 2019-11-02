@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Runtime-Descriptor-Version: 3.0
+Application-Type: classic-applet
+Classic-Package-AID: //aid/61C19D2B05/63
+

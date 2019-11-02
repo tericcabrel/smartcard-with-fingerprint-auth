@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Register</title>
+
+    <link rel="stylesheet" th:href="@{/assets/vendor/datepicker/tempusdominus-bootstrap-4.css}" />
+    <link rel="stylesheet" th:href="@{/assets/css/register.css}">
+</head>
+<body>
+    <form layout:fragment="content"
+          th:action="@{/register}"
+          method="post"
+          th:object="${user}"
+          class="form-register"
+    >
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <span class="mb-1">User Registration</span>
+                <a href="/" th:href="@{/}" class="text-secondary">Back to home</a>
+            </div>
+            <div class="card-body">
+                <div th:if="${param.success}">
+                    <div class="alert alert-info">You've successfully registered to our awesome app!</div>
+                </div>
+
+                <ul class="error-list">
+                    <li th:each="e : ${#fields.detailedErrors()}" th:class="'error-item ' + ${e.global ? 'globalerr' : 'fielderr'}">
+                        <span th:text="${e.global}? '*' : ${e.fieldName}">The field name</span>:
+                        <span th:text="${e.message}">The error message</span>
+                    </li>
+                </ul>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-4" th:classappend="${#fields.hasErrors('uid')} ? 'has-error' : ''">
+                            <label for="uid">User UID:</label>
+                            <input class="form-control" type="text" name="uid" id="uid" placeholder="UID" th:readonly="true"
+                                   th:field="*{uid}" th:errorclass="field-error"/>
+                            <div class="invalid-feedback" th:each="error: ${#fields.errors('uid')}" th:text="${error}">
+                                Validation error
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-4" th:classappend="${#fields.hasErrors('name')}? 'has-error':''">
+                            <label for="name">User Name:</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Ex: John DOE" th:field="*{name}"/>
+                            <p class="invalid-feedback" th:each="error : ${#fields.errors('name')}" th:text="${error}">
+                                Validation error
+                            </p>
+                        </div>
+
+                        <div class="form-group mb-4" th:classappend="${#fields.hasErrors('birthDate')}? 'has-error':''">
+                            <label for="birth">Birth date:</label>
+                            <input class="form-control datetimepicker-input" type="text" name="birthDate" id="birth" placeholder="Ex: 5991-01-01"
+                                   th:field="*{birthDate}" data-toggle="datetimepicker" data-target="#birth" data-date-format="YYYY-MM-DD"/>
+                            <p class="invalid-feedback" th:each="error : ${#fields.errors('birthDate')}" th:text="${error}">
+                                Validation error
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                        <img src="/assets/images/slack.png" alt="" id="finger-img" class="img-thumbnail" />
+                        <div class="form-group" th:classappend="${#fields.hasErrors('finger')}? 'has-error':''">
+                            <input class="form-control" type="hidden" name="finger" id="finger" th:field="*{finger}"/>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="form-group pt-2 d-flex justify-content-between">
+                    <button class="btn btn-primary btn-sm" type="button" id="btn-save-card">Save in card</button>
+                    <button class="btn btn-success btn-sm" type="submit" id="btn-save-db">Save in database</button>
+                    <button class="btn btn-primary btn-sm" type="button" id="btn-get-finger">Get Fingerprint</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div layout:fragment="scripts">
+        <script th:src="@{/assets/vendor/datepicker/moment.js}"></script>
+        <script th:src="@{/assets/vendor/datepicker/tempusdominus-bootstrap-4.js}"></script>
+        <script th:src="@{/assets/js/register.js}"></script>
+    </div>
+</body>
+</html>

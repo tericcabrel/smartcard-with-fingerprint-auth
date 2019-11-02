@@ -1,0 +1,8 @@
+#app-home #table-users tr:first-child th {
+    border-top: none;
+    text-align: center;
+}
+
+#app-home #table-users tr td {
+    text-align: center;
+}

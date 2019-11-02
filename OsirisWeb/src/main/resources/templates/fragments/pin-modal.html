@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="pmodal"
+         class="modal fade"
+         tabindex="-1" role="dialog"
+         id="pin-modal"
+         aria-labelledby="pinModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pinModalLabel">Authentication</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <label for="input-pin">Enter the PIN Code:</label>
+                        <input type="number" class="form-control text-center" id="input-pin" maxlength="6" minlength="6"
+                            placeholder="6 digits code like 887570"/>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-3">
+                        <button class="btn btn-primary btn-sm" type="button" id="btn-send-pin">Validate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

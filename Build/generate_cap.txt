@@ -1,0 +1,14 @@
+converter -debug -verbose -exportpath D:\java_card_kit-2_2_2\java_card_kit-2_2_2-rr-bin-windows-do\api_export_files -classdir D:\Card\Osiris\bin -applet 0x01:0x02:0x03:0x04:0x05:0x06:0x07:0x08:0x09:0x00 Osiris osiris 0x01:0x02:0x03:0x04:0x05:0x06:0x07:0x08:0x09:0x00:0x00 1.0
+
+gp -l
+
+gp -info
+
+gp -install applet.cap -default
+
+gp -uninstall applet.cap
+
+#Reinstall
+gp -f -install applet.cap
+
+gp -delete D27600012401

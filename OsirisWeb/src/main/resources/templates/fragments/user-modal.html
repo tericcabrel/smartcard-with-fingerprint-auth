@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="umodal"
+         class="modal fade"
+         tabindex="-1"
+         role="dialog"
+         id="user-modal"
+         aria-labelledby="userModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Card Information</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <div class="card-action d-flex justify-content-between align-items-center">
+                        <div class="font-weight-bold">ACTION: </div>
+                        <div>
+                            <button class="btn btn-danger btn-sm" id="btn-reset">
+                                <i class="fas fa-upload"></i> Reset
+                            </button>
+                            <button class="btn btn-success btn-sm" id="btn-unblock">
+                                <i class="fas fa-unlock"></i> Unblock
+                            </button>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="mb-4">
+                        CARD UID: <span id="card-uid">N/A</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Card name: </label>
+                        <div class="input-group mb-3">
+                            <input type="text" id="card-name" class="form-control" placeholder="Ex: John DOE"/>
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary" id="btn-update-name">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-birth">Birth date: </label>
+                        <div class="input-group mb-3">
+                            <input type="text" id="card-birth" class="form-control" placeholder="Ex: YYYY-MM-DD"
+                                   data-toggle="datetimepicker" data-target="#card-birth" data-date-format="YYYY-MM-DD"/>
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary" id="btn-update-birth">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

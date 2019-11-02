@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="nav-left-sidebar sidebar-dark" id="app-sidebar" th:fragment="sidebar">
+        <div class="menu-list">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="d-xl-none d-lg-none" href="/">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-divider">
+                            CARD STATUS
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="fas fa-fw fa-credit-card"></i> Card inserted
+                                <div class="badge badge-danger" id="sd-inserted">
+                                    <i class="fas fa-fw fa-times icon-status"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="fas fa-fw fa-lock"></i> Card Locked
+                                <div class="badge badge-danger" id="sd-locked">
+                                    <i class="fas fa-fw fa-times icon-status"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/">
+                                <i class="fas fa-fw fa-key"></i> Authenticated
+                                <div class="badge badge-danger" id="sd-auth">
+                                    <i class="fas fa-fw fa-times icon-status"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/">
+                                <i class="fas fa-fw fa-keyboard"></i> PIN Remain
+                                <div class="badge badge-primary icon-pin" id="sd-pin-remain">3</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="p-3">
+                <a href="#" class="btn btn-light w-100" id="btn-view-card-info" data-toggle="modal" data-target="#user-modal">
+                    <i class="fas fa-eye"></i> View Card Info
+                </a>
+                <a href="#" class="btn btn-success w-100 mt-4" id="btn-biometric-auth" data-toggle="modal" data-target="#fingerprint-modal">
+                    <i class="fas fa-eye"></i> Biometric Authentication
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

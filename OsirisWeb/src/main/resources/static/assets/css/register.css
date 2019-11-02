@@ -1,0 +1,20 @@
+.form-register .has-error input.form-control {
+    border-color: #dc3545;
+}
+.form-register .has-error .invalid-feedback {
+    display: block;
+}
+
+.form-register .error-list {
+    padding-left: 15px;
+}
+
+.form-register .error-list .error-item {
+    color: #dc3545;
+    font-size: 12px;
+}
+
+.form-register #finger-img {
+    width: 200px;
+    height: 200px;
+}

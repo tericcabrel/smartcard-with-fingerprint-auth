@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="ocf-cc" level="project" />
+    <orderEntry type="library" name="amqp-client-5.7.3" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.9" level="project" />
+    <orderEntry type="library" name="slf4j-simple-1.7.9" level="project" />
+    <orderEntry type="library" name="commons-codec-1.11" level="project" />
+    <orderEntry type="library" name="ImageSDK" level="project" />
+  </component>
+</module>

@@ -1,0 +1,41 @@
+#navbarSupportedContent {
+    padding-right: 15px;
+}
+#app-sidebar .navbar-nav .nav-item a.nav-link {
+    position: relative;
+}
+#app-sidebar .navbar-nav .nav-item .badge {
+    position: absolute;
+    top: 12.5px;
+    right: 0px !important;
+    display: block;
+}
+
+#app-sidebar .navbar-nav .nav-item .badge .icon-status {
+    font-size: 10px;
+    color: white;
+    margin-right: 0 !important;
+}
+
+#app-sidebar .navbar-nav .nav-item .icon-pin {
+    width: 26.5px;
+    height: 22px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fingerprint-modal #finger-result {
+    width: 200px;
+    height: 200px;
+}
+#fingerprint-modal #finger-result i {
+    font-size: 36px;
+}
+#fingerprint-modal #finger-result .hidden {
+    display: none;
+}
+#fingerprint-modal #welcome-message {
+    font-size: 20px;
+}

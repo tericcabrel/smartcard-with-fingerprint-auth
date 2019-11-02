@@ -1,0 +1,11 @@
+D:\Card\Bionic\Bionic\bin\Debug\Bionic.exe.config
+D:\Card\Bionic\Bionic\obj\Debug\Bionic.csprojResolveAssemblyReference.cache
+D:\Card\Bionic\Bionic\bin\Debug\Bionic.exe
+D:\Card\Bionic\Bionic\bin\Debug\Bionic.pdb
+D:\Card\Bionic\Bionic\obj\Debug\Bionic.exe
+D:\Card\Bionic\Bionic\obj\Debug\Bionic.pdb
+D:\Card\Bionic\Bionic\bin\Debug\SourceAFIS.dll
+D:\Card\Bionic\Bionic\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.dll
+D:\Card\Bionic\Bionic\bin\Debug\RabbitMQ.Client.dll
+D:\Card\Bionic\Bionic\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.xml
+D:\Card\Bionic\Bionic\bin\Debug\RabbitMQ.Client.xml

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="fmodal"
+         class="modal fade"
+         tabindex="-1" role="dialog"
+         id="fingerprint-modal"
+         aria-labelledby="fingerprintModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fingerprintModalLabel">Fingerprint Authentication</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                    <div id="finger-result" class="badge badge-light d-flex justify-content-center align-items-center">
+                       <span class="hidden" id="auth-failed">
+                           <i class="fas fa-times"></i>
+                       </span>
+                       <span class="hidden" id="auth-success">
+                           <i class="fas fa-check"></i>
+                       </span>
+                    </div>
+
+                    <p class="mt-4 mb-4" id="welcome-message"></p>
+
+                    <div class="d-flex justify-content-center mt-3">
+                        <button class="btn btn-primary btn-sm" type="button" id="btn-auth-fingerprint">Authenticate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
